@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .black {
+      width: 700px;
+      height: 102px;
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .black::before {
+      content: " ";
+      width: 40px;
+      height: 100px;
+      background: black;
+      border: 1px solid;
+      position: absolute;
+      right: 332px;
+      z-index: 3
+    }
+
+    .black::after {
+      content: " ";
+      width: 440px;
+      height: 100px;
+      border: 0.5px solid gray;
+      background: linear-gradient(90deg, white 50%, lightgoldenrodyellow 50%);
+      position: absolute;
+      right: 18.5%;
+    }
+
+    .white4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .white4::before {
+      position: absolute;
+      content: " ";
+      width: 440px;
+      height: 100px;
+      border: 1px solid gray;
+      left: 129px;
+      background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0.5, 0.5, 0.5, 0.2), rgba(255, 255, 255, 0.1));
+      color: gray;
+      z-index: 1;
+    }
+
+    .white4::after {
+      position: absolute;
+      content: "Made in Taiwan ";
+      width: 440px;
+      height: 100px;
+      left: 129px;
+      color: gray;
+      z-index: 1;
+      transform: translateY(80%);
+    }
+
+
+    .white3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .white5 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 125px;
+      z-index: 1;
+    }
+
+    .white5-1 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 140px;
+      z-index: 1;
+    }
+
+    .white5-2 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 155px;
+      z-index: 1;
+    }
+
+    .white5-3 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 170px;
+      z-index: 1;
+    }
+
+    .white5-4 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 185px;
+      z-index: 1;
+    }
+
+    .white5-5 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 200px;
+      z-index: 1;
+    }
+
+    .white5-6 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 215px;
+      z-index: 1;
+    }
+
+    .white5-7 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 230px;
+      z-index: 1;
+    }
+
+    .white5-8 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 245px;
+      z-index: 1;
+    }
+
+    .white5-9 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 260px;
+      z-index: 1;
+    }
+
+    .white5-10 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 275px;
+      z-index: 1;
+    }
+
+    .white5-11 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 290px;
+      z-index: 1;
+    }
+
+    .white5-12 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      left: 305px;
+      z-index: 1;
+    }
+
+    .white5-13 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 140px;
+      z-index: 1;
+    }
+
+    .white5-14 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 155px;
+      z-index: 1;
+    }
+
+    .white5-15 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 170px;
+      z-index: 1;
+    }
+
+    .white5-16 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 185px;
+      z-index: 1;
+    }
+
+    .white5-17 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 200px;
+      z-index: 1;
+    }
+
+    .white5-18 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 215px;
+      z-index: 1;
+    }
+
+    .white5-19 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 230px;
+      z-index: 1;
+    }
+
+    .white5-20 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 245px;
+      z-index: 1;
+    }
+
+    .white5-21 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 260px;
+      z-index: 1;
+    }
+
+    .white5-22 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 275px;
+      z-index: 1;
+    }
+
+    .white5-23 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 290px;
+      z-index: 1;
+    }
+
+    .white5-24 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 305px;
+      z-index: 1;
+    }
+
+    .white5-25 {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid gray;
+      right: 320px;
+      z-index: 1;
+    }
+
+
+    .white {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .white::before {
+      content: "";
+      width: 50px;
+      height: 70px;
+      border: 0.5px solid gray;
+      background: linear-gradient(white, gray, white);
+      position: absolute;
+      left: 78px;
+      top: 15px;
+    }
+
+    .white::after {
+      content: "";
+      width: 50px;
+      height: 70px;
+      border: 0.5px solid gray;
+      background: linear-gradient(white, gray, white);
+      border-radius: 10%;
+      position: absolute;
+      right: 78px;
+      top: 15px;
+    }
+
+    .white2 {
+      width: 700px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .white2::before {
+      content: "";
+      width: 40px;
+      height: 100px;
+      border: 0.5px solid gray;
+      border-radius: 10%;
+      background: linear-gradient(white, gray, white);
+      position: absolute;
+      left: 40px;
+    }
+
+    .white2::after {
+      content: "";
+      width: 77px;
+      height: 1px;
+      border: 1px solid gray;
+      border-radius: 10%;
+      background: linear-gradient(white, gray, white);
+      position: absolute;
+      top: 50px;
+      right: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="black">
+    <div class="white4">
+      <div class="white3">
+        <div class="white5"></div>
+        <div class="white5-1"></div>
+        <div class="white5-2"></div>
+        <div class="white5-3"></div>
+        <div class="white5-4"></div>
+        <div class="white5-5"></div>
+        <div class="white5-6"></div>
+        <div class="white5-7"></div>
+        <div class="white5-8"></div>
+        <div class="white5-9"></div>
+        <div class="white5-10"></div>
+        <div class="white5-11"></div>
+        <div class="white5-12"></div>
+        <div class="white5-13"></div>
+        <div class="white5-14"></div>
+        <div class="white5-15"></div>
+        <div class="white5-16"></div>
+        <div class="white5-17"></div>
+        <div class="white5-18"></div>
+        <div class="white5-19"></div>
+        <div class="white5-20"></div>
+        <div class="white5-21"></div>
+        <div class="white5-22"></div>
+        <div class="white5-23"></div>
+        <div class="white5-24"></div>
+        <div class="white5-25"></div>
+      </div>
+      <div class="white"></div>
+      <div class="white2"></div>
+    </div>
+</body>
+
+</html>
